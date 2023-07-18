@@ -1,0 +1,26 @@
+<table>
+  <thead>
+  <th (click)="sortData('nom')">Nom <img [src]="sortArrow" alt="arrow" class="arrow"></th>
+  <th (click)="sortData('population')">Population <img [src]="sortArrow" alt="arrow" class="arrow"></th>
+  <th (click)="sortData('superficie')">Superficie <img [src]="sortArrow" alt="arrow" class="arrow"></th>
+  <th (click)="sortData('continent')">Continent <img [src]="sortArrow" alt="arrow" class="arrow"></th>
+  <th (click)="sortData('pib')">Produit intérieur brut <img [src]="sortArrow" alt="arrow" class="arrow"></th>
+  <th>Image</th>
+  <th></th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of filteredCountries" (click)="getCountryDetail(country)">
+    <td>{{country.nom}}</td>
+    <td>{{country.population}}</td>
+    <td>{{country.superficie}}</td>
+    <td>{{country.continent}}</td>
+    <td>{{country.pib}}</td>
+    <td><img src="assets/images/{{country.image}}" alt="drapeaux"></td>
+    <td (click)="openModal(country.id)" (click)="excludeEvent($event)"  ><img src="assets/edit.svg"></td>
+    <td (click)="deleteCountry(country.id)" (click)="excludeEvent($event)"  ><img src="assets/delete.svg"></td>
+  </tr>
+  </tbody>
+</table>
+<app-modal></app-modal>
+

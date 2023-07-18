@@ -1,0 +1,31 @@
+<div class="header"><h1>{{country?.nom}}</h1>
+  <button (click)="goBack()">Gestion des pays</button>
+  <br/>
+</div>
+<div class="container">
+  <table>
+    <tbody>
+      <tr>
+      <th>Nom</th>
+      <td>{{country?.nom}}</td>
+      </tr>
+      <tr>
+      <th>Population</th>
+      <td>{{country?.population}}</td>
+      </tr>
+      <tr>     
+      <th>Superficie</th>
+      <td>{{country?.superficie}}</td>
+      </tr>
+      <tr>
+      <th>Continent</th>
+      <td>{{country?.continent}}</td>
+      </tr>
+      <tr>
+        <th>Produit intérieur brut</th>
+        <td>{{country?.pib}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <img src="assets/images/{{country?.image}}" height="150px" width="150px">
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Gestion des pays</h1>
+  <div>
+    <input class='buttonRecherche' type="text" [(ngModel)]="searchText" (input)="filterCountries()" placeholder="Rechercher par nom">
+    <button (click)="export()"> Exporter en csv</button>
+  </div>
+  <br/>
+<button (click)="openModal(1)"> Ajouter</button>
+</div>
+<app-country-tab></app-country-tab>
+<app-modal></app-modal>
+

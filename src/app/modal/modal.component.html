@@ -1,0 +1,34 @@
+<div class="modal" [ngClass]="{ 'show': showModal }">
+  <div class="modal-content">
+  <div class="infos">
+
+    <div class="title">
+      <label>Nom du pays: </label>
+      <input type="text" [(ngModel)]="country.nom"/>
+    </div>
+    <div class="title">
+      <label>Population: </label>
+      <input type="number" [(ngModel)]="country.population"/>
+    </div>
+    <div class="title">
+      <label>Superficie: </label>
+      <input type="number" [(ngModel)]="country.superficie"/>
+    </div>
+    <div class="title">
+      <label>Continent: </label>
+      <input type="text" [(ngModel)]="country.continent"/>
+    </div>
+  <div class="title">
+    <label>Produit intérieur brut:</label>
+    <input type="number" [(ngModel)]="country.pib"/>
+  </div>
+  <div class="title">
+    <label>drapeau du pays:</label>
+    <input type="file" [(ngModel)]="country.image"/>
+  </div>
+    <div class="buttons">
+    <button class="buttons" (click)="closeModal(country)">OK</button>
+    <button class="buttons"  (click)="closeModal()">Annuler</button>
+  </div>
+</div>
+
